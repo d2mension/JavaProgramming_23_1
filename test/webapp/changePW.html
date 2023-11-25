@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <meta charset = "UTF-8">
+    <title>비밀번호 변경</title>
+    <link rel = "stylesheet" href="login_page].css">
+    <link rel = 'icon' type = 'img' href = 'img/logo2.png'>
+    <script src = "jquery-3.4.1.js"></script>
+</head>
+<body>
+    <section class = "login-form">
+        <div class = "logo">
+            <a href="index.jsp"><img src = "img/logo.png" alt = "logo" width = 400 height = 155></a></div>
+        <form action = "ChangePW" method="post"> <!--서버 연결-->
+                <div class = "int-area">
+                    <input type = "password" name = "pw"
+                    autocomplete="off" required>
+                    <label for = "pw">패스워드</label>
+                    </div>
+                    <div class = "int-area">
+                    <input type = "password" name = "new_pw"
+                    autocomplete="off" required>
+                    <label for = "new_pw">새 패스워드</label>
+                    </div>
+                    <div class = "btn-area">
+                        <button id = "btn" 
+                        type = "submit">변경하기</button>
+                    </div>
+                    </form>
+    </section>
+    <script>
+        let pw = $("#pw");
+        let new_pw = $("#new_pw");
+        let btn = $("#btn");
+
+        $(btn).on('click', function(){
+            if($(pw).val()==""){
+                $(pw).next('label').addClass('warning');
+            }
+            else if($(new_pw).val()==""){
+                $(new_pw).next('label').addClass('warning');
+            }
+        });
+
+    </script>
+</body>
+</html>
