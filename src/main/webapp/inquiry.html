@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title>조회</title>
+        <link rel = 'stylesheet' href = 'inquiry.css'>
+        <link rel = 'icon' type = 'img' href = 'img/logo2.png'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    </head>
+    <body>
+       <header>
+        <div class = "logo">
+            <a href = "index.jsp"><img src = "img/logo.png" alt = "logo" width = 330></a> <!--로고 사이즈 정하고 넣기-->
+        </div>
+       </header>
+       <!--메뉴바-->
+        <div class = "container">
+            <div class="menu_wrap">
+                <ul class = "dep1">
+                    <li>
+                        <a href="#">한국</a>
+                        <ul class = "dep2">
+                            <li><a href="kr_sf.jsp">한국 SF</a></li>
+                            <li><a href="kr_mistery.jsp">한국 미스테리</a></li>
+                            <li><a href="kr_or.jsp">한국 일반</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">영미</a>
+                        <ul class = "dep2">
+                            <li><a href="en_sf.jsp" id="en-sf">영미 SF</a></li>
+                            <li><a href="en_or.jsp">영미 일반</a></li>
+                            <li><a href="en_cl.jsp">영미 고전</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">프랑스</a>
+                        <ul class = "dep2">
+                            <li><a href="fr_or.jsp">프랑스 일반</a></li>
+                            <li><a href="fr_cl.jsp">프랑스 고전</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class = "book_container" style="display:block;">
+                <p style="padding-top:25px;text-align:center;font-size:24px;font-weight:bold;">카테고리를 선택하세요.</p>
+            </div>
+        </div>
+    </body>
+</html>

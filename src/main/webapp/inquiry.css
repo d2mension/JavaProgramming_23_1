@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+
+.keyword {
+	float: left; border: solid 1.5px; border-radius: 8%;
+	text-align: center; margin-right: 7px; padding: 0 5px;
+	background-color: #FFFDF8;
+	font-family: 'Hahmlet', serif;
+	border-color: #1A469B;
+} 
+
+.book_title {
+	font-weight: bold;
+	font-size: 22.5px;
+}
+
+.book_make {
+	padding-bottom: 28px;
+}
+
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+}
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin:auto;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.book_pic {
+	position :relative;
+}
+
+.fav_star {
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	left: 5px;
+	top:5px;
+}
+.fav_star:hover {
+	cursor: pointer;
+}
+
+.menu_wrap{
+    position:relative;
+}
+.menu_wrap .dep1{
+    font-size:0;
+    margin-top: 0px;
+    margin-left: 250px;
+}
+.menu_wrap .dep1 > li{
+    display: inline-block;
+    width:300px;
+    vertical-align: top;
+    background: #1A469B;
+    text-align:center;
+    font-size: 15px;
+}
+.menu_wrap .dep1 > li:hover > a{
+    background: #121213;
+    color: #fff;
+}
+.menu_wrap .dep1 > li:hover > .dep2{
+    display:block;
+}
+.menu_wrap .dep1 > li > a{
+    display:block;
+    padding: 10px 0;
+}
+.menu_wrap .dep2{
+    display: none;
+    background: rgb(171, 170, 170);
+}
+.menu_wrap .dep2 a{
+    display: block;
+    padding: 10px 0;
+}
+.menu_wrap .dep2 a:hover{
+    text-decoration:underline;
+}
+
+.book_container{
+    padding:50px;
+    margin:20px;
+    margin-left: 250px;
+    margin-right: 290px;
+    display: flex;
+    justify-content:flex-start;
+    background-color: #F4f4f4;
+    height:140px;
+}
+.contents{
+    margin-left: -10px;
+    margin-top: -20px;
+}
+.book_information{
+    margin-left: 160px;
+    margin-top: -170px;
+}
+.book_information li{
+    line-height: 35px;
+}

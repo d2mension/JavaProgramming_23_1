@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin:auto;
+}
+p{
+    text-decoration: none;
+    color: white;
+}
+.menu_wrap{
+    position:relative;
+}
+.menu_wrap .dep1{
+    font-size:0;
+    margin-top: 0px;
+    margin-left: 250px;
+}
+.menu_wrap .dep1 > li{
+    display: inline-block;
+    width:300px;
+    vertical-align: top;
+    background: #1A469B;
+    text-align:center;
+    font-size: 15px;
+}
+.menu_wrap .dep1 > li > p{
+    display:block;
+    padding: 10px 0;
+}
+.book_container{
+    padding:50px;
+    margin:20px;
+    margin-left: 250px;
+    margin-right: 290px;
+    display: flex;
+    justify-content:flex-start;
+    background-color: rgba(171, 168, 176, 0.289);
+}
+.contents{
+    margin-left: -10px;
+    margin-top: -20px;
+}
+.book_information{
+    margin-left: 160px;
+    margin-top: -170px;
+}
+.book_information li{
+    font-size: 18px;
+    line-height: 35px;
+}

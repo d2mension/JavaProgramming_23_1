@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title>조회 - 한국 일반</title>
+        <script src = "jquery-3.4.1.js"></script>
+        <link rel = 'stylesheet' href = 'inquiry.css'>
+        <link rel = 'icon' type = 'img' href = 'img/logo2.png'>
+    </head>
+    <body>
+       <header>
+        <div class = "logo">
+            <a href = "index.html"><img src = "img/logo.png" alt = "logo" width = 330></a> <!--로고 사이즈 정하고 넣기-->
+        </div>
+       </header>
+       <!--메뉴바-->
+        <div class = "container">
+            <div class="menu_wrap">
+                <ul class = "dep1">
+                    <li>
+                        <a href="#">한국 일반</a>
+                        <ul class = "dep2">
+                            <li><a href="kr_sf.jsp">한국 SF</a></li>
+                            <li><a href="kr_mistery.jsp">한국 미스테리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">영미</a>
+                        <ul class = "dep2">
+                            <li><a href="en_sf.jsp" id="en-sf">영미 SF</a></li>
+                            <li><a href="en_or.jsp">영미 일반</a></li>
+                            <li><a href="en_cl.jsp">영미 고전</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">프랑스</a>
+                        <ul class = "dep2">
+                            <li><a href="fr_or.jsp">프랑스 일반</a></li>
+                            <li><a href="fr_cl.jsp">프랑스 고전</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class = "book_container">
+                <div class = "contents">
+                    <div class = "book_pic"><img src = "img/rec_kr_1.png" alt = "book" width="120"></div>
+                    <div class = "book_information">
+                        <li class = "book_title">책 제목: </li>
+                        <li class = "book_author"> 저자: </li>
+                        <li class = "book_publisher">출판사: </li>
+                        <li class = "book_content">책 설명: </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

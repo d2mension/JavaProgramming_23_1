@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+    font-size: 15px;
+}
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.caption {
+	text-align: center;
+}
+
+.caption > button {
+	text-align: center;
+	width: 50px;
+	height: 25px;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagename_bar{
+    background-color: #1A469B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+    margin-right: 290px;
+    padding: 10px;
+}
+.pagename_bar li{
+    font-size: 16px;
+    color: white;
+}
+.user_container{
+    padding:100px;
+    margin:50px;
+    margin-left: 250px;
+    margin-right: 290px;
+    display: flex;
+    justify-content:flex-start;
+    background-color: rgba(171, 168, 176, 0.289);
+}
+.user_information li{
+    font-size: 18px;
+    line-height: 45px;
+}
+.wishlist {
+    padding:100px;
+    margin:50px;
+    margin-left: 250px;
+    margin-right: 290px;
+    justify-content:flex-start;
+    background-color: rgba(171, 168, 176, 0.289);
+}
+.wishlist_bar {
+	content: flex;
+}
+.footer_bar{
+    background-color: #e9e8e860;
+    float:center;
+    padding:15px;
+}
+.footer_bar{
+    margin-top: 165px;
+}
+.footer_bar p{
+    text-align:center;
+}

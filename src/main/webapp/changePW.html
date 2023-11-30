@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <meta charset = "UTF-8">
+    <title>비밀번호 변경</title>
+    <link rel = "stylesheet" href="login_page.css">
+    <link rel = 'icon' type = 'img' href = 'img/logo2.png'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class = "login-form">
+        <div class = "logo">
+            <a href="index.jsp"><img src = "img/logo.png" alt = "logo" width = 400 height = 155></a></div>
+        <form action = "ChangePW" method="post"> <!--서버 연결-->
+                <div class = "int-area">
+                    <input type = "password" name = "pw"
+                    autocomplete="off" required>
+                    <label for = "pw">패스워드</label>
+                    </div>
+                    <div class = "int-area">
+                    <input type = "password" name = "new_pw"
+                    autocomplete="off" required>
+                    <label for = "new_pw">새 패스워드</label>
+                    </div>
+                    <div class = "btn-area">
+                        <button id = "btn" 
+                        type = "submit">변경하기</button>
+                    </div>
+                    </form>
+    </section>
+    <script>
+        let pw = document.getElementById("pw");
+        let new_pw = document.getElementById("new_pw");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener('click', function(){
+   			if (pw.value === "") {
+        		pw.nextElementSibling.classList.add('warning');
+   			} else if (new_pw.value === "") {
+        		new_pw.nextElementSibling.classList.add('warning');
+    		}
+		});
+
+    </script>
+</body>
+</html>

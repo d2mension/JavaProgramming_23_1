@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <meta charset = "UTF-8">
+    <head>
+		<title>조회 - 검색</title>
+	</head>
+    
+	<body>
+	    <!-- 검색 결과를 표시할 영역 -->
+	    <div id="searchResults"></div>
+	
+	    <script>
+	        var search = "YourSearchParameter"; // 검색어
+	        var search_word = "YourSearchWord"; // 검색어 단어
+	        var dataUrl = `http://localhost:8090/Java_23_1/GetSearchedData?search=${encodeURIComponent(search)}&search_word=${encodeURIComponent(search_word)}`;
+	
+	        function loadData() {
+	            fetch(dataUrl, {
+	                headers: {
+	                    Accept: 'application/json',  // JSON 데이터 요청
+	                },
+	            })
+	            .then(response => {
+	                return response.json();
+	            })
+	            .then(data => {
+	                // 데이터로부터 동적으로 HTML 요소 생성
+	                var searchResults = document.getElementById('searchResults');
+	                data.forEach(book => {
+	                    // 책 컨테이너 div 생성
+	                    var bookContainer = document.createElement('div');
+	                    bookContainer.className = 'book_container';
+	
+	                    // 책 내용 div 생성
+	                    var contents = document.createElement('div');
+	                    contents.className = 'contents';
+	
+	                    // 책 이미지 div 생성
+	                    var bookPic = document.createElement('div');
+	                    bookPic.className = 'book_pic';
+	                    bookPic.innerHTML = '<img src="' + book.image + '" alt="book" width="120">';
+	
+	                    // 책 정보 div 생성
+	                    var bookInfo = document.createElement('div');
+	                    bookInfo.className = 'book_information';
+	
+	                    // 책 제목 li 생성
+	                    var bookTitle = document.createElement('li');
+	                    bookTitle.className = 'book_title';
+	                    bookTitle.textContent = book.title;
+	
+	                    // 키워드 ul 생성
+	                    var bookKeywords = document.createElement('ul');
+	                    bookKeywords.className = 'book_keywords';
+	                    // 각 키워드 li 생성
+	                    book.keywords.forEach(keyword => {
+	                        var kw = document.createElement('li');
+	                        kw.className = 'keyword';
+	                        kw.textContent = "#" + keyword;
+	                        bookKeywords.appendChild(kw);
+	                    });
+	
+	                    // 저자 및 출판사 정보 li 생성
+	                    var bookMake = document.createElement('li');
+	                    bookMake.className = 'book_make';
+	                    bookMake.innerHTML = '<span class="book_author">' + book.author + '</span> | ' +
+	                                        '<span class="book_publisher">' + book.publisher + '</span>';
+	
+	                    // 각 요소를 부모 div에 삽입
+	                    bookInfo.appendChild(bookTitle);
+	                    bookInfo.appendChild(bookMake);
+	                    bookInfo.appendChild(bookKeywords);
+	
+	                    contents.appendChild(bookPic);
+	                    contents.appendChild(bookInfo);
+	
+	                    bookContainer.appendChild(contents);
+	
+	                    // 최종적으로 생성된 bookContainer를 검색 결과 영역에 삽입
+	                    searchResults.appendChild(bookContainer);
+	                });
+	            })
+	            .catch(error => console.error('Error:', error));
+	        }
+	
+	        // 페이지 로드 시 loadData 함수 호출
+	        window.onload = loadData;
+	    </script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html land = "ko">
+<head>
+    <meta charset = "UTF-8">
+    <title>로그인</title>
+    <link rel = "stylesheet" href="login_page.css">
+    <link rel = 'icon' type = 'img' href = 'img/logo2.png'>
+    <script src = "jquery-3.4.1.js"></script>
+</head>
+<body>
+    <section class = "login-form">
+        <div class = "logo">
+            <a href="index.html"><img src = "img/logo.png" alt = "logo" width = 400 height = 155></a></div>
+        <form action = ""> <!--서버 연결-->
+            <div class = "int-area">
+                <input type = "text" name = "id" id = "id"
+                autocomplete="off" required>
+                <label for = "id">아이디</label>
+            </div>
+            <div class = "int-area">
+                <input type = "password" name = "pw" id = "pw"
+                autocomplete="off" required>
+                <label for = "pw">패스워드</label>
+            </div>
+            <div class = "btn-area">
+                <button id = "btn"
+                type = "submit">로그인</button>
+            </div>
+        </form>
+        
+        <div class = "caption">
+            <a href = "signup.html"> 회원가입</a>
+        </div>
+    </section>
+    
+    <script>
+    let id = document.getElementById('id');
+    let pw=document.getElementById('pw');
+    let btn=document.getElementById('btn');
+    
+    btn.addEventListener('click', function(){
+        if(id.value == ""){
+            id.next('label').addClass('warning');
+            setTimeout(function(){
+                id.next('label').removeClass('warning');
+            },1500);
+        }
+        else if(pw.value == ""){
+            pw.next('label').addClass('warning');
+            setTimeout(function(){
+                pw.next('label').removeClass('warning');
+            },1500);
+        }
+    });
+    </script>
+    </body>
+    </html> 
