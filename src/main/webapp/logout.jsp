@@ -15,14 +15,19 @@
         <div class = "logo">
             <a href="index.jsp"><img src = "img/logo.png" alt = "logo" width = 400 height = 155></a></div>
         <div class = "caption">
-        <button type="button" onclick="location.href='index.jsp'"
-        <%session.invalidate(); %>>로그아웃</button>
+        <button type="button" onclick="
+        <%session.invalidate(); %>
+        location.href='index.jsp';res();" >로그아웃</button>
         </div>
         
         <div class = "caption">
         <button type = "button" onClick="history.back();">뒤쪽 페이지로</button>
         </div>
     </section>
-
+<script>
+function res(){
+	alert("로그아웃 되었습니다");
+}
+</script>
 </body>
 </html>
