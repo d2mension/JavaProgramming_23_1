@@ -31,7 +31,7 @@ if(sess != null){
         
         <%if(ID != null){ %>
         <div class = "caption">
-        <button type="button" 
+        <button type="button" onclick = "
         	<% 
         	Delete delAcc = new Delete();
         	cond = "userID = \"" + ID + "\"";
@@ -39,7 +39,7 @@ if(sess != null){
         	if(success==1)
         		sess.invalidate();
         	
-        %>onclick = "location.href = 'index.jsp'; res();" 
+        %>location.href = 'index.jsp'; res();" 
         >계정 삭제</button>
     	</div>
         <%}else{%> 
