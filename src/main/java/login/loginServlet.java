@@ -52,8 +52,8 @@ public class loginServlet extends HttpServlet {
 						if(ident.match()) {
 							out.println("login success<br>");
 							
-                            session = request.getSession(true);
-                            session.setAttribute("loggedInUser", ID);
+                            				session = request.getSession(true);
+                            				session.setAttribute("loggedInUser", ID);
 							session.setMaxInactiveInterval(-1);
                             
 							out.println("Go to index page after 3 seconds");
